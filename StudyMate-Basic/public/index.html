@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudyMate - AI Student Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="logo">
+                📚
+            </div>
+
+            <h1>
+                StudyMate
+            </h1>
+
+            <p>
+                AI-powered study assistant for students
+            </p>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main>
+
+
+            <!-- INPUT -->
+
+            <label for="userInput">
+
+                📝 Enter your notes or question
+
+            </label>
+
+
+            <textarea
+                id="userInput"
+                placeholder="Paste your study notes or type a question here..."
+            ></textarea>
+
+
+            <!-- AI FEATURES -->
+
+            <div class="buttons">
+
+
+                <button
+                    onclick="generateResponse('summarize')"
+                >
+                    📝 Summarize
+                </button>
+
+
+                <button
+                    onclick="generateResponse('quiz')"
+                >
+                    ❓ Generate Quiz
+                </button>
+
+
+                <button
+                    onclick="generateResponse('explain')"
+                >
+                    💡 Explain
+                </button>
+
+
+                <button
+                    onclick="generateResponse('improve')"
+                >
+                    ✍️ Improve Answer
+                </button>
+
+
+            </div>
+
+
+            <!-- UTILITY BUTTONS -->
+
+            <div class="utility-buttons">
+
+
+                <button
+                    class="clear-btn"
+                    onclick="clearAll()"
+                >
+                    🗑️ Clear
+                </button>
+
+
+                <button
+                    class="copy-btn"
+                    onclick="copyResponse()"
+                >
+                    📋 Copy Response
+                </button>
+
+
+            </div>
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading"
+                class="loading"
+            >
+                Generating AI response...
+            </div>
+
+
+            <!-- ERROR -->
+
+            <div
+                id="error"
+                class="error"
+            ></div>
+
+
+            <!-- RESULT -->
+
+            <section class="result-section">
+
+
+                <h2>
+                    🤖 AI Response
+                </h2>
+
+
+                <div id="result">
+
+                    Your AI-generated response
+                    will appear here.
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                StudyMate • AI Student Utility
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
